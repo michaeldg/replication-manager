@@ -46,6 +46,7 @@ func validateHostPort(h string, p string) bool {
 }
 
 func getSeqFromGtid(gtid string) uint64 {
+	return 1
 	e := strings.Split(gtid, "-")
 	if len(e) != 3 {
 		log.Fatalln("Error splitting GTID:", gtid)
